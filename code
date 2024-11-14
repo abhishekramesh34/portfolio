@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhishek Ramesh | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+   
+    <nav id="navbar">
+        <div class="container">
+            <a href="#landing" class="logo">Abhishek Ramesh</a>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+  
+    <section id="landing">
+        <div class="overlay">
+            <h1 data-aos="fade-up">Hi, I'm Abhishek Ramesh</h1>
+            <p data-aos="fade-up" data-aos-delay="200">A Networking Expert, Pentester, and Graphical Designer</p>
+            <a href="#about" class="btn" data-aos="fade-up" data-aos-delay="400">Learn More</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2 data-aos="fade-up">About Me</h2>
+            <p data-aos="fade-up" data-aos-delay="200">I am a versatile professional specializing in Networking, Pentesting, and Graphical Designing. With a passion for technology and problem-solving, I constantly seek to enhance my skills and tackle new challenges.</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <h2 data-aos="fade-up">My Skills</h2>
+            <div class="skills-list">
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-network-wired"></i>
+                    <h3>Networking</h3>
+                </div>
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Pentesting</h3>
+                </div>
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fas fa-paint-brush"></i>
+                    <h3>Graphical Designing</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2 data-aos="fade-up">Contact Me</h2>
+            <form id="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            <div id="thank-you" style="display:none;">
+                <p>Thank you for reaching out! I'll get back to you soon.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Abhishek Ramesh | All Rights Reserved</p>
+            <div class="social-icons">
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+AOS.init();
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    document.getElementById('contact-form').style.display = 'none';
+    document.getElementById('thank-you').style.display = 'block';
+});
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    line-height: 1.6;
+}
+
+#navbar {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+#navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+#navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+#navbar ul {
+    list-style: none;
+}
+
+#navbar ul li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+#navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+#landing {
+    background: url('https://th.bing.com/th/id/OIP.h108vcoqZOzNYRA3iUl_igHaEK?w=292&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7');
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+#landing .overlay {
+    background: rgba(0, 0, 0, 0.6); 
+    padding: 20px;
+    border-radius: 8px;
+}
+
+#landing h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+#landing p {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#landing .btn {
+    background-color: #ff6347;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+#landing .btn:hover {
+    background-color: #e55347;
+}
+
+#about {
+    padding: 60px 20px;
+    background: #fff;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+
+#skills {
+    padding: 60px 20px;
+    background: #f0f0f0;
+    text-align: center;
+}
+
+#skills h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.skills-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.skill-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+}
+
+.skill-card i {
+    font-size: 40px;
+    color: #ff6347;
+}
+
+.skill-card h3 {
+    margin-top: 10px;
+    font-size: 20px;
+    color: #333;
+}
+
+#contact {
+    padding: 60px 20px;
+    background: #f0f0f0;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#contact form input, #contact form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#contact form button {
+    background-color: #ff6347;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+#contact form button:hover {
+    background-color: #e55347;
+}
+
+#thank-you {
+    font-size: 18px;
+    color: #333;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer .social-icons a {
+    color: #fff;
+    font-size: 24px;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+footer .social-icons a:hover {
+    color: #ff6347;
+}
